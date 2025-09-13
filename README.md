@@ -61,8 +61,9 @@ erDiagram
 ```
 
 
-# Excercise 2
+## Exercise 2 — SQL DDL + Example Data
 
+```sql
 BEGIN;
 
 
@@ -131,7 +132,7 @@ INSERT INTO car
  engine_ccm, gear_type, air_condition, cruise_control, leather_seats, seats, horsepower, category_id)
 VALUES
 ('DK AB12 345', 'Mercedes', 'E400', 'benzin', 2021, 6, 42000, 3000, 'automatic', TRUE, TRUE, TRUE, 5, 330, (SELECT category_id FROM category WHERE name='Luksus')),
-('DK CD34 567', 'Volkswagen', 'Sharan', 'diesel', 2019, 9, 98000, 2000, 'manual', TRUE, TRUE, FALSE, 7, 150, (SELECT category_id FROM category WHERE name='Familie')),
+('DK CD34 567', 'Volkswagen','Sharan','diesel', 2019, 9, 98000, 2000, 'manual', TRUE, TRUE, FALSE, 7, 150, (SELECT category_id FROM category WHERE name='Familie')),
 ('DK EF56 789', 'BMW', 'M240i', 'benzin', 2022, 4, 25000, 3000, 'manual', TRUE, TRUE, FALSE, 4, 340, (SELECT category_id FROM category WHERE name='Sport'));
 
 INSERT INTO rental_contract
@@ -148,4 +149,3 @@ VALUES
  NOW() - INTERVAL '5 days', NOW() - INTERVAL '4 days', 200, 25000, 25140);
 
 COMMIT;
-
