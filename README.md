@@ -1,5 +1,5 @@
 # KailuaKars
-
+```mermaid
 erDiagram
   CATEGORY ||--o{ CAR : classifies
   CAR ||--o{ RENTAL_CONTRACT : is_rented_in
@@ -55,3 +55,5 @@ erDiagram
 
     int end_odometer_km          "reading at return (nullable)"
   }
+
+```
