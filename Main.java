@@ -39,7 +39,7 @@ public class Main {
         try (Statement st = conn.createStatement();
              ResultSet rs = st.executeQuery(sql)) {
             while (rs.next()) {
-                System.out.printf("%d - %s (%s)%n",
+                System.out.printf("%d - - %s (%s)%n",
                         rs.getInt("renter_id"),
                         rs.getString("name"),
                         rs.getString("city"));
